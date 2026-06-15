@@ -1,0 +1,191 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
+}
+
+/* =========================
+   NETFLIX HEADER
+========================= */
+.top-header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 14px 24px;
+
+  background: rgba(17, 17, 17, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.25s ease;
+}
+
+.top-header.scrolled {
+  background: rgba(17, 17, 17, 0.85);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.top-header .logo {
+  font-size: 18px;
+  font-weight: 700;
+  color: #e50914;
+}
+
+/* =========================
+   TITLE + NOTICE
+========================= */
+h1 {
+  text-align: center;
+  font-size: 30px;
+  padding: 2px;
+  margin: 10px 0 4px;
+}
+
+.notice {
+  text-align: center;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.3;
+  color: #aaa;
+}
+
+/* =========================
+   SEARCH
+========================= */
+#search {
+  display: block;
+  margin: 0 auto 15px;
+  width: 320px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #222;
+  color: #fff;
+}
+
+/* =========================
+   FILTERS
+========================= */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.filters select {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  background: #222;
+  color: white;
+}
+
+/* =========================
+   GRID
+========================= */
+#grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+/* =========================
+   CARD (Netflix hover)
+========================= */
+.card {
+  background: #1c1c1c;
+  border-radius: 12px;
+  overflow: hidden;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.06);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+
+.card:hover img {
+  transform: scale(1.03);
+}
+
+.info {
+  padding: 10px;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.meta {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* =========================
+   BADGE
+========================= */
+.badge {
+  display: inline-block;
+  padding: 3px 6px;
+  font-size: 11px;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.badge.owned {
+  background: #2ecc71;
+  color: #000;
+}
+
+.badge.none {
+  background: #e74c3c;
+  color: #fff;
+}
+
+/* =========================
+   SKELETON
+========================= */
+.skeleton {
+  width: 100%;
+  height: 260px;
+  background: linear-gradient(90deg, #222, #333, #222);
+  background-size: 400% 100%;
+  animation: loading 1.2s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+/* sentinel */
+#sentinel {
+  height: 1px;
+}

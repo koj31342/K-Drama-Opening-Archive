@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>한국 사극 드라마 오프닝 아카이브</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- 🔥 Netflix 스타일 헤더 -->
+    <header class="top-header">
+      <div class="logo">한국 사극 드라마 오프닝 아카이브</div>
+    </header>
+
+    <!-- 🧾 타이틀 -->
+    <h1>한국 사극 드라마 오프닝 아카이브</h1>
+
+    <!-- 📢 안내문 -->
+    <p class="notice">
+      이 사이트는 TMDB API를 사용하였으며, 오프닝 영상을 직접 스트리밍하지 않는
+      개인적·비상업적 목적의 프로젝트입니다.
+    </p>
+
+    <!-- 🔎 검색 -->
+    <input id="search" placeholder="제목, 연도, 방송사, ID, 시대 검색..." />
+
+    <!-- 🎛️ 필터 -->
+    <div class="filters">
+      <select id="filterYear">
+        <option value="">연도</option>
+      </select>
+
+      <select id="filterNetwork">
+        <option value="">방송사</option>
+      </select>
+
+      <select id="filterEra">
+        <option value="">시대</option>
+      </select>
+
+      <select id="filterOwned">
+        <option value="">소유 여부</option>
+        <option value="O">소유중</option>
+        <option value="X">미소유</option>
+      </select>
+    </div>
+
+    <!-- 📦 카드 -->
+    <div id="grid"></div>
+
+    <!-- 🔥 sentinel -->
+    <div id="sentinel"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
